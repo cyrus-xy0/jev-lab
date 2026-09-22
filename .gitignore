@@ -1,0 +1,10 @@
+# Local files and credentials
+.DS_Store
+.env
+.env.*
+!.env.example
+.openai/
+node_modules/
+__pycache__/
+*.pyc
+artifacts/

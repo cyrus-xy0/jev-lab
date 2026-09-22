@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="选择示例或自由提问，在同一界面并排对比 LLM 与 Jev 的响应、后续动作和结果。">
+  <title>Jev Lab · 决策对比实验室</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23172330'/%3E%3Cpath d='M9 8v10a6 6 0 006 6h3V8M23 8v16' fill='none' stroke='%2372ddc3' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="vendor/tom-select/tom-select.css?v=8c9940bbef51">
+  <link rel="stylesheet" href="styles.css?v=b4bc7adab847">
+  <link rel="stylesheet" href="theme.css?v=71b5e110218c">
+  <link rel="stylesheet" href="open.css?v=4865bfdb6615">
+  <link rel="stylesheet" href="gallery.css?v=9196055fd54a">
+  <link rel="stylesheet" href="shared-controls.css?v=3ea87f1f6bc0">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <aside class="sidebar">
+    <a class="brand" href="#basics" aria-label="Jev Lab 首页"><span class="brand-mark">j<span>∥</span></span><span>Jev <b>Lab</b><small>决策对比实验室</small></span></a>
+    <div class="workspace"><span class="workspace-icon">W</span><div>团队工作空间<small>一起理解 AI 的另一面</small></div></div>
+    <div class="nav-label">探索与实验</div>
+    <nav aria-label="主导航">
+      <button class="nav-item active" data-nav="basics"><span data-icon="help"></span>认识 Jev</button>
+      <button class="nav-item" data-nav="compare"><span data-icon="panels"></span>模型对比</button>
+      <button class="nav-item" data-nav="gallery"><span data-icon="grid"></span>测试广场</button>
+    </nav>
+    <div class="sidebar-note"><span class="little-spark">✳</span><strong>先体验，再下结论。</strong><p>同一份输入，并排看过程。<br>找到适合你的使用方式。</p><button class="text-link" data-action="guide">了解 LLM 与 Jev <span>↗</span></button></div>
+    <div class="sidebar-bottom"><span class="avatar">我</span><div>体验者<small>本地演示空间</small></div><span data-icon="shield"></span></div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar"><div class="breadcrumb"><span>工作台</span><span>/</span><b id="page-name">认识 Jev</b></div><div class="top-actions"><span class="demo-tag" title="本地模拟接口；未调用模型或执行业务。耗时为本地运行时间，Token 为估算。">Mock 模式</span><button class="icon-button" data-action="guide" aria-label="使用指南"><span data-icon="help"></span></button></div></header>
+    <main id="main" tabindex="-1"><noscript>请开启 JavaScript 使用模型对比。</noscript>
+    </main>
+  </div>
+  <dialog id="modal"><div id="modal-content"></div></dialog><div class="toast" role="status" id="toast"></div>
+  <script src="vendor/tom-select/tom-select.base.min.js?v=82d638f1ca73"></script>
+  <script src="shared-controls.js?v=54b6b97f6fde"></script>
+  <script src="app.js?v=f6bce5dc1bfc"></script>
+  <script src="basics.js?v=2344a51bbfcf"></script>
+  <script src="template-catalog.js?v=c118e879e8da"></script>
+  <script src="readable.js?v=625c3bb139b2"></script>
+  <script src="template-business.js?v=be0895addeab"></script>
+  <script src="template-prompts-business.js?v=2b3181f6ba3d"></script>
+  <script src="template-prompts-workflows.js?v=4845be838f04"></script>
+  <script src="template-prompt-history.js?v=8974376df5fd"></script>
+  <script src="template-library.js?v=f98d6fc029b2"></script>
+  <script src="official-mock-values.js?v=a01d15866bad"></script>
+  <script src="mock-client.js?v=7bd252ca379d"></script>
+  <script src="gallery.js?v=60ab43c28abd"></script>
+  <script src="jev-results.js?v=f0d75f1319cc"></script>
+  <script src="open.js?v=f168a54b25fb"></script>
+  <script src="dual-input.js?v=d57155512f6d"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* Local styles for personal experiments inside the test gallery. */
+.gallery-source-tabs{margin-bottom:24px}
+.gallery-record-card{cursor:default}
+.gallery-record-card .gallery-card-top{flex-wrap:wrap;gap:10px}
+.gallery-record-privacy{font-size:13px;color:#647d91;margin-left:auto}
+.gallery-record-status{font-size:14px;line-height:1.6;color:#47627e;margin:14px 0 20px}
+.gallery-record-card .case-bottom{border-bottom:1px solid #e3eaf2;padding-bottom:14px}
+.gallery-record-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:16px}
+.gallery-record-actions .button,.gallery-record-actions .text-link{min-height:44px}
+.gallery-record-actions .text-link{white-space:nowrap}
+@media(max-width:620px){
+ .gallery-record-privacy{margin-left:0}
+ .gallery-record-actions{flex-wrap:wrap}
+ .gallery-record-card h3{min-height:0}
+}
+
+/* Template previews show the same input text used by comparison. */
+.template-case-card .template-input-excerpt{white-space:pre-line;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.template-more .template-input-preview{font-family:inherit;font-size:14px;line-height:1.8}
+.template-scene-brief{margin:20px 0}
+.template-scene-brief>span{font-size:12px;color:#648578}
+.template-scene-brief .template-scenario{margin:8px 0 20px}
+.template-more>label{color:#345b78;font-weight:550}

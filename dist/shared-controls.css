@@ -1,0 +1,35 @@
+/* Shared controls: Tom Select's interaction, aligned with the existing cool-neutral palette. */
+:root{--control-border:#cbd7e3;--control-ink:#29465f;--control-focus:#507eae;--control-hover:#f0f5fa;--control-radius:9px}
+.icon-button{display:inline-flex;align-items:center;justify-content:center;flex:0 0 40px;width:40px;height:40px;min-width:40px;min-height:40px;padding:0;border:1px solid #d8e2ec;border-radius:var(--control-radius);background:#fff;color:#60758a;box-shadow:0 1px 2px #18344a05;line-height:1;cursor:pointer;transition:background .16s,border-color .16s,color .16s,box-shadow .16s}
+.icon-button>span{display:flex;align-items:center;justify-content:center}.icon-button svg{display:block;width:20px;height:20px;pointer-events:none}
+.icon-button:hover{background:var(--control-hover);border-color:#b8cbdc;color:#294b6b}.icon-button:active{background:#e4edf5;box-shadow:inset 0 1px 2px #29455f12}
+.icon-button:focus-visible{outline:3px solid #507eae70;outline-offset:3px;border-color:var(--control-focus)}
+.modal-heading{padding:18px 24px;gap:20px;min-height:80px;background:#fbfcfe;align-items:center}
+.modal-heading h2{font-size:20px;font-weight:600;line-height:1.5;margin:0;min-width:0;overflow-wrap:anywhere;letter-spacing:-.2px}
+.modal-heading .dialog-close{flex-basis:44px;width:44px;height:44px;min-width:44px;min-height:44px;font-size:0;border-color:transparent;background:transparent;box-shadow:none}
+.modal-heading .dialog-close:hover{background:#eaf0f6;border-color:#d9e3ec}.modal-heading .dialog-close:active{background:#dfe9f2}
+.shared-select{position:relative;min-width:0;color:var(--control-ink);font:inherit;text-align:left;vertical-align:middle}
+.shared-select.single .ts-control{min-height:42px;border:1px solid var(--control-border);border-radius:var(--control-radius);padding:9px 34px 9px 13px;background:#fff;box-shadow:0 1px 2px #1c385707;cursor:pointer!important;font-family:inherit;font-size:14px;font-weight:500;line-height:22px;display:flex;align-items:center;flex-wrap:nowrap;gap:8px;color:var(--control-ink);transition:border-color .16s,box-shadow .16s,background .16s}
+.shared-select .ts-control::after{content:'';position:absolute;right:13px;top:calc(50% - 4px);width:7px;height:7px;border-right:1.6px solid #6b8298;border-bottom:1.6px solid #6b8298;transform:rotate(45deg);transition:transform .16s;pointer-events:none}
+.shared-select.dropdown-active .ts-control::after{transform:translateY(3px) rotate(225deg)}
+.shared-select.single .ts-control:hover{border-color:#9eb6ce;background:#fbfdff}
+.shared-select.focus .ts-control{border-color:var(--control-focus);box-shadow:0 0 0 3px #507eae1c}
+.shared-select .ts-control:focus-visible{outline:2px solid var(--control-focus);outline-offset:3px}
+.shared-select .select-value{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;margin:0!important;pointer-events:none}
+.shared-select .ts-dropdown{z-index:30;margin:6px 0 0;border:1px solid #d0dce8;border-radius:11px;background:#fff;box-shadow:0 4px 9px #19334f0c,0 16px 36px #19334f20;padding:5px;overflow:hidden;color:var(--control-ink);font-family:inherit;font-size:14px;line-height:1.55}
+.shared-select .ts-dropdown-content{max-height:240px;padding:0;overscroll-behavior:contain;scrollbar-width:thin}
+.shared-select .ts-dropdown [data-selectable]{display:flex;align-items:center;gap:16px;min-height:42px;padding:10px 11px;border-radius:6px;cursor:pointer;white-space:normal}
+.shared-select .ts-dropdown .option+.option{margin-top:2px}.shared-select .ts-dropdown .option.active{background:#edf3f9;color:#214564}
+.shared-select .ts-dropdown .option.selected{background:#eaf1fa;color:#315f91;font-weight:600}
+.shared-select .ts-dropdown .select-option-label{flex:1;min-width:0;overflow-wrap:anywhere}.select-check{width:17px;height:17px;flex:0 0 17px;opacity:0}.selected>.select-check{opacity:1}
+.shared-select.disabled .ts-control{opacity:1;background:#f2f5f8;color:#8c9dad;border-color:#dce4ec;box-shadow:none;cursor:not-allowed!important}.shared-select.disabled .ts-control::after{border-color:#a7b5c3}
+.model-select{flex:0 0 108px;width:108px}.model-select .ts-dropdown{min-width:156px}.model-select .ts-control{min-height:40px}
+.jev-question-heading .field-select{width:230px;max-width:100%;flex:0 1 230px;margin:0}.jev-question-heading .shared-select .ts-control{min-height:40px}
+.jev-entry .shared-select{--control-border:#c2d7ca;--control-focus:#48846c;--control-ink:#335e4c}.jev-entry .shared-select.focus .ts-control{box-shadow:0 0 0 3px #48846c1a}.jev-entry .shared-select .option.selected{color:#276348;background:#eaf5ef}.jev-entry .shared-select .option.active{background:#f0f6f3}
+.template-case-detail .field-select{width:100%;margin:10px 0}
+select:not(.tomselected){border-radius:var(--control-radius);min-height:40px;padding-right:30px}
+@media(max-width:1000px) and (min-width:621px){.model-select{flex-basis:93px;width:93px}.model-select .ts-control{padding-left:10px;padding-right:28px}.model-select .ts-control::after{right:10px}}
+@media(max-width:620px){.icon-button{min-width:44px;min-height:44px;flex-basis:44px}.modal-heading{padding:14px 16px;gap:12px;min-height:72px}.modal-heading h2{font-size:18px}.shared-select.single .ts-control{min-height:44px;font-size:16px}.shared-select .ts-dropdown{font-size:16px}.shared-select .ts-dropdown [data-selectable]{min-height:46px}.model-select{width:108px;flex-basis:108px}.jev-question-heading .field-select{flex-basis:100%;width:100%}.open-model-title{gap:8px}}
+@media(prefers-reduced-motion:reduce){.icon-button,.shared-select .ts-control,.shared-select .ts-control::after{transition:none}}
+/* The custom combobox is the accessible control; the select remains the form value. */
+select.tomselected.ts-hidden-accessible{display:none!important}
